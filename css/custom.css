@@ -1,0 +1,70 @@
+
+body{
+  font-size: 100%;
+  min-width: 320px;
+
+}
+
+.desc-detail{
+  line-height: 1.2rem;
+}
+.result{
+  background-color: white;
+  border:solid 1px;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  
+
+}
+.result-list{
+ 
+}
+
+
+#results-container{
+  background-color: #E9EAED;
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+}
+
+
+
+.book-image{
+  
+  padding-right: 4px;
+  padding-left: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* max-width 640px, mobile-only styles,*/
+@media only screen and (max-width: 40em){
+  .l{
+    margin-bottom: .4rem;
+    font-size: 1rem;
+  }
+
+  .listdata{
+    padding-top: .4rem;
+
+  }
+
+  .result-image{
+    padding-top: 15%;
+    padding-bottom: 5%;
+  }
+
+  .result{
+    margin-bottom: 0.5rem;
+  }
+
+  .result-detail{
+    padding: 0;
+    border-top: 1px solid;
+    border-top-color: #9A9FA4;
+  }
+
+  .result-list{
+    padding: 0;
+  }
+}
