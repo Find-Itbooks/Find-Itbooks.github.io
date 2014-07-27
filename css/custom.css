@@ -37,17 +37,27 @@ body{
   padding-bottom: 4px;
 }
 
+.dwnld-btn{
+  font-size:1.1rem; padding: 0.575rem 0.95rem;
+}
+
+.view_btn{
+  font-size:1rem; padding: 0.475rem 0.95rem;
+}
+
 /* max-width 640px, mobile-only styles,*/
 @media only screen and (max-width: 40em){
   .l{
     margin-bottom: .4rem;
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   .listdata{
     padding-top: .4rem;
+    padding-right: 0px;
 
   }
+
 
   .result-image{
     padding-top: 15%;

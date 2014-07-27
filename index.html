@@ -3,173 +3,69 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pattern Library</title>
-    <link href="css/foundation.css" rel="stylesheet">
+    <title>FindITbooks | Mobile</title>
+    <link href="css/foundation.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
   </head>
 
-  <body style="background-color:black;">
+  <body>
 
-  <br>
-  <!-- searchbox -->
+
+
  
-  <form>  
+  <div class="row">
+    <div  class="small-12 columns">
+      
+      <h2><a href="index.html">Find IT Books </a><small> for mobile</small></h2>
+      <hr/>
+    </div>
+
+    <form>  
       <div class="small-12 medium-10 medium-centered columns">
         <div class="row collapse">
           <div class="small-10 columns">
-            <input type="text" placeholder="Search by book title, authors..">
+            <input id="search_t" type="text" placeholder="Search by book title, authors..">
           </div>
           <div class="small-2 columns">
-            <a href="#" class="button postfix"><i class="fa fa-search"></i></a>
+            <a id="search-b" class="button postfix"><i class="fa fa-search"></i></a>
           </div>
         </div>  
       </div>
-
-      
-      
-
   </form>
 
-  <!-- searchbox -->
-    <br><br>
+  <div id="s_r" class="small-12 medium-10 medium-centered columns" style=" margin-bottom: 0.5rem;
+    margin-top: -0.5rem;">
+    
+  </div>
+ </div>
 
-  <!-- individual search result block -->
+
+  <!-- <div class="row">
+  
+ </div>
+  -->
+   
+ 
+ 
+   
+ 
   <div class="row">
   <!-- results container -->
-    <div id="results-container" class="small-12 columns">
- <!-- individual search result block -->
-      <div class="small-12 columns result">
-        <!-- result list block -->
-        <div class="small-12 columns result-list">
-        <!-- result image -->
-          <div class="small-3 columns book-image">
-          <img class="result-image" src="img/sample.jpg">
-          </div>
-        <!-- result image -->
+    <div id="results-container" style="min-height:400px;" class="small-12 columns">
 
-        <!-- result list data -->
-          <div class="small-9 columns listdata">
-            <div class="result-title l">
-            <h4>PHP: The Good Parts</h4>
-            </div>
-            <div class="result-subtitle l">
-            Delivering the Best of PHP
-            </div>
-            <div class="result-publisher l">
-            Publisher:  Manning
-            </div>
-            <div class="result-author l">
-            By:  Keith Wood
-            </div>
-            <button style="font-size:1rem; padding: 0.475rem 0.95rem;"class="small button"><i class="fa fa-arrow-circle-down"></i>&nbsp;&nbsp;View</button>
-            &nbsp;&nbsp;<img src="img/loader-sm.gif">
-          </div>
-        <!-- result list data -->
-          
+    <!-- result_list_all -->
+      <div id="result_lists_all" >
+      
+
+      
+        
+     </div>
+     <!-- result_list_all --> 
+       <div id="pagntn-info" class="row">
+        <img style="display:none; margin-top:1.2rem;margin-bottom:1.2rem;padding-left:50%;" src="img/loader-bg.gif" id="pg_loader">
+        <!-- <a id="paginate" style="padding-top:1rem;padding-bottom:1rem; text-align:center;border-radius:7px; color:#FCFCFC;font-size:1.3rem; background-color:#D0D0D0;" class="small-6 small-offset-3 columns">Load More</a> -->
         </div>
-        <!-- result list block -->
-      </div>
-      <!-- individual search result block -->
-
-      <!-- individual search result block -->
-      <div class="small-12 columns result">
-        <!-- result list block -->
-        <div class="small-12 columns result-list">
-        <!-- result image -->
-          <div class="small-3 columns book-image">
-          <img class="result-image" src="img/sample.jpg">
-          </div>
-        <!-- result image -->
-
-        <!-- result list data -->
-          <div class="small-9 columns listdata">
-            <div class="result-title l">
-            <h4>PHP: The Good Parts</h4>
-            </div>
-            <div class="result-subtitle l">
-            Delivering the Best of PHP
-            </div>
-            <div class="result-publisher l">
-            Publisher:  Manning
-            </div>
-            <div class="result-author l">
-            By:  Keith Wood
-            </div>
-            <button style="font-size:1rem; padding: 0.475rem 0.95rem;"class="small button"><i class="fa fa-arrow-circle-down"></i>&nbsp;&nbsp;View</button>
-          </div>
-        <!-- result list data -->
-          
-        </div>
-        <!-- result list block -->
-      </div>
-      <!-- individual search result block -->
-
-      <!-- individual search result block -->
-      <div class="small-12 columns result">
-        <!-- result list block -->
-        <div class="small-12 columns result-list">
-        <!-- result image -->
-          <div class="small-3 columns book-image">
-          <img class="result-image" src="img/sample.jpg">
-          </div>
-        <!-- result image -->
-
-        <!-- result list data -->
-          <div class="small-9 columns listdata">
-            <div class="result-title l">
-            <h4>PHP: The Good Parts</h4>
-            </div>
-            <div class="result-subtitle l">
-            Delivering the Best of PHP
-            </div>
-            <div class="result-publisher l">
-            Publisher:  Manning
-            </div>
-            <div class="result-author l">
-            By:  Keith Wood
-            </div>
-            <button style="font-size:1rem; padding: 0.475rem 0.95rem;"class="small button"><i class="fa fa-arrow-circle-down"></i>&nbsp;&nbsp;View</button>
-          </div>
-        <!-- result list data -->
-          
-        </div>
-        <!-- result list block -->
-
-        <!-- additional data on clicking view -->
-          <div style="padding-top:2px;"class="small-12 columns result-detail">
-            <div style="padding:0px;" class="desc-heading small-12 columns">
-              <h4  style="padding:0px;" class="small-10 columns">Book Description</h4>
-              <span class="small-1 columns">
-                <a style="color:#78888D;"><i class="fa fa-times fa-2x"></i></a>
-              </span>
-            </div><br><br><br>
-            <div class="desc-detail l">
-              Extending jQuery teaches you to build custom extensions to the jQuery library. In it, you'll discover how to write plugins and how to design them for maximum reuse. You'll also learn to write new widgets and effects for the jQuery UI. Along the way, you'll explore extensions in key areas including Ajax, events, animation, and validation.This book assumes intermediate-level knowledge of jQuery and JavaScript. No experience writing plugins or other extensions is required.
-              <br><br>
-            </div>
-
-            <div class="additional-details">
-              <div class="l">
-                ISBN : 9781617291036
-              </div>
-              <div class="l">
-                Year : 2013
-              </div>
-              <div class="l">
-                Pages : 312
-              </div>
-            </div>
-
-            <button style="font-size:1.1rem; padding: 0.575rem 0.95rem;"><i class="fa fa-download"></i>&nbsp;Download</button>
-          </div>
-          <!-- additional data on clicking view -->
-
-      </div>
-      <!-- individual search result block -->
-
-
-       
 
 
 
@@ -177,19 +73,39 @@
 
       
 
-    <div class="row">
-      <button style="border-radius:7px; font-size:1.3rem; background-color:#D0D0D0;" class="small-6 small-offset-3 columns">Load more</button>
-    </div>
+    
       
     </div>
     <!-- results container -->
   </div>
-  <!-- individual search result block -->
+ 
+   
+ 
+ 
+   
+ 
+  <footer class="row">
+    <div class="large-12 columns">
+      <!-- <hr/> -->
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© All rights reserved.</p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+    
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
+
+    
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jscroll.js"></script>
+    <script src="js/foundation/foundation.js"></script>
     <script>
       $(document).foundation();
     </script>
+    
+    <script src="js/custom.js"></script>
   </body>
 </html>
