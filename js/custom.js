@@ -1,9 +1,25 @@
 $(document).ready(function(){
 
 	
+	$("#search_t").keyup(function(){
+  		if($("#search_t").val().length>0){
+  			$("#srb").addClass('search-b');
+  			$("#srb").attr('disabled',false);
+  		}else{
+  			
+  			$("#srb").attr('disabled',true);
+			$("#srb").removeClass('search-b');
+  		
+  			}
+	}); 
+	$("#srb").attr('disabled',true);
+	$("#srb").removeClass('search-b');
 
-	$("#search-b").click(function(){
+	$("#search_t").keyup(function(){
+  		
+	}); 		
 
+	$("body").on("click",".search-b",function(){
 	
 		var l = '<img src="img/loader-sm.gif">';
 		$("#s_r").html(l);
@@ -18,6 +34,9 @@ $(document).ready(function(){
 		});
 
 		req.done(function(response){
+
+			
+
 			total = response.Total;
 			
 			if(total == undefined){
