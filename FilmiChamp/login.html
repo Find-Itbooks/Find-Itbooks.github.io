@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filmi Champ | Login</title>
+
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- css -->
+
+
+    
+  </head>
+  <body>
+    
+    
+
+
+    <!--  login box -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <h2 class="text-center login-title">Log In with </h2>
+                <!-- <h2 class="text-center">Filmi Champ</h2> -->
+                <img class="img-responsive" src="img/login_logo.png">
+                <div class="account-wall">
+
+                    <div style="display:none;" id="login_error" class="alert alert-warning" role="alert">
+                      
+                      <strong>Incorrect </strong> Login Id or Password.
+                    </div>
+                    <!-- <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                        alt=""> -->
+                    <form class="form-signin">
+                    <input id="loginid" type="text" class="form-control" placeholder="Login Id" required autofocus>
+                    <input id="loginpw" type="password" class="form-control" placeholder="Password" required>
+                    <button id="login" class="btn btn-lg btn-primary btn-block" type="submit">
+                        Log in</button>
+                    <!-- <label class="checkbox pull-left">
+                        <input type="checkbox" value="remember-me">
+                        Remember me
+                    </label>
+                    <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span> -->
+                    </form>
+                </div>
+                <!-- <a href="#" class="text-center new-account">Create an account </a> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--  login box -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#login").click(function(event){
+            event.preventDefault();
+            var id, pw;
+            id = $("#loginid").val();
+            pw = $("#loginpw").val();
+
+            if(id == 'filmichamp' && pw == 'filmichamp'){
+                window.location = 'levelsall.html';
+            }else{
+                $("#login_error").show();
+            }
+        });
+    });
+    </script>
+  </body>
+</html>
