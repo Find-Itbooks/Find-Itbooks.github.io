@@ -39,8 +39,8 @@
  	color:white;
  }
 
- /*overwriting default list stylecolor*/
- .table-view-cell {
+ /*puja list style*/
+ .puja_list {
     background-color: white;
 }
 
@@ -52,7 +52,7 @@
 /*list subhead*/
 
 .table-view-cell p{
-    color: #CCCCCC;
+    color: #A6A49F;
 }
 
 
@@ -74,3 +74,8 @@ input[type="search"]{
 	width: 12%;
 }
 
+/*map style in detail page*/
+.detail_map{
+	width: 100%;
+	margin: 0px;
+}
