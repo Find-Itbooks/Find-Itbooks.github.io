@@ -1,0 +1,75 @@
+/*!
+ * =====================================================
+ * Puja App (http://)
+ * Copyright 2014 Rajarshi Ghosh
+ * 
+ *
+ * 
+ * =====================================================
+ */
+
+ .city_area_tile{
+    border: 1px solid;
+    float: left;
+    font-size: 22px;
+    height: 134px;
+    margin: 3px;
+    padding: 12%;
+    text-align: center;
+    width: 48%;
+    
+ }
+
+ .city_area_tile a{
+ 	color:white;
+ 	font-family: Helvetica;
+ }
+
+
+ .center_title{
+ 	text-align: center;
+ 	font-weight: 600;
+ 	font-size: 20px;
+ 	font-family: Helvetica;
+ 	color: white;
+ }
+
+/*all link default to white*/
+ a{
+ 	color:white;
+ }
+
+ /*overwriting default list stylecolor*/
+ .table-view-cell {
+    background-color: white;
+}
+
+/*list heading*/
+.list_heading{
+    color: #F79B31;
+}
+
+/*list subhead*/
+
+.table-view-cell p{
+    color: #CCCCCC;
+}
+
+
+/*overwriting default bar color*/
+
+.bar{
+ background-color: #F79B31;
+}
+
+/*custom style search*/
+input[type="search"]{
+	.margin-bottom: 0px;
+	width: 88%;
+}
+
+.custom_search{
+	line-height: 1.66;
+	background-color: white;
+}
+
