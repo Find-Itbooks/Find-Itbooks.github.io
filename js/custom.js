@@ -108,7 +108,7 @@ $(document).ready(function(){
 
 	$("body").on("click",".paginate",function(){
 
-		
+		nanobar.go( 10 );
 
 		var id = this.id;
 		var c = id.split('_');
@@ -116,7 +116,7 @@ $(document).ready(function(){
 		var total = parseInt(c[1]);
 		if(count != total){
 
-			$("#pg_loader").show();
+			
 			count += 1;
 
 
@@ -133,7 +133,8 @@ $(document).ready(function(){
 		
 
 				var l,data;
-				for(var i=0; i<response.Books.length; i++){
+				var receved_count = response.Books.length;
+				for(var i=0; i<receved_count; i++){
 				data = response.Books[i];	
 				if(data.SubTitle == undefined){
 					data.SubTitle = '';
@@ -148,7 +149,8 @@ $(document).ready(function(){
 
 		        $("#result_lists_all").append(l);
 
-		        $("#pg_loader").hide();
+		         var prcnt_p = ((i+1) / receved_count) * 100 ; 
+            	 nanobar.go( prcnt_p );
 				}
 
 
