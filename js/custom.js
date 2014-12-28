@@ -1,6 +1,13 @@
 $(document).ready(function(){
 
+	/* nanobar code*/
+
+	var options = {bg: '#008cba'};
+	var nanobar = new Nanobar( options );
 	
+
+
+	$("#search_t").val('');
 	$("#search_t").keyup(function(){
   		if($("#search_t").val().length>0){
   			$("#srb").addClass('search-b');
@@ -20,9 +27,11 @@ $(document).ready(function(){
 	}); 		
 
 	$("body").on("click",".search-b",function(){
+
+		nanobar.go( 10 );
 	
-		var l = '<img src="img/loader-sm.gif">';
-		$("#s_r").html(l);
+		// var l = '<img src="img/loader-sm.gif">';
+		// $("#s_r").html(l);
 		var search_q = $("#search_t").val();
 
 		var req;
@@ -36,6 +45,8 @@ $(document).ready(function(){
 		req.done(function(response){
 
 			
+			
+
 
 			total = response.Total;
 			
@@ -52,7 +63,8 @@ $(document).ready(function(){
 			pages = parseInt(pages);
 			$("#result_lists_all").empty();
 			var l,data;
-			for(var i=0; i<response.Books.length; i++){
+			var receved_count = response.Books.length;
+			for(var i=0; i<receved_count; i++){
 			data = response.Books[i];	
 			if(data.SubTitle == undefined){
 				data.SubTitle = '';
@@ -66,11 +78,14 @@ $(document).ready(function(){
             "&nbsp;&nbsp;<img id='pic_"+data.ID+"' style='display:none;' src='img/loader-sm.gif'></div></div><div id='add_data"+data.ID+"'></div>";
 
             $("#result_lists_all").append(l);
+
+            var prcnt_p = ((i+1) / receved_count) * 100 ; 
+            nanobar.go( prcnt_p );
 			}
 
 			$("#pagntn-info").empty();
-			var loader = '<img style="display:none; margin-top:1.2rem;margin-bottom:1.2rem;padding-left:50%;" src="img/loader-bg.gif" id="pg_loader">';
-			$("#pagntn-info").append(loader);
+			// var loader = '<img style="display:none; margin-top:1.2rem;margin-bottom:1.2rem;padding-left:50%;" src="img/loader-bg.gif" id="pg_loader">';
+			// $("#pagntn-info").append(loader);
 			if(pages == 1){
 
 
@@ -88,6 +103,8 @@ $(document).ready(function(){
 
 		});
 	});
+
+	
 
 	$("body").on("click",".paginate",function(){
 
